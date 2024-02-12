@@ -1,10 +1,10 @@
-import NavigationBar from "@/components/NavigationBar";
+import { Flex, Spinner } from "@chakra-ui/react";
 
 export default function Home() {
+  // check if
   return (
-    <main>
-        <NavigationBar/>
-        
-    </main>
+    <Flex w="full" h="calc(100vh)" justifyContent="center" alignItems="center">
+      <Spinner />
+    </Flex>
   );
 }
