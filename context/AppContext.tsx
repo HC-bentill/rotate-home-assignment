@@ -17,7 +17,7 @@ export const useAppContext = () => {
 
 export const AppContextProvider = ({children}: AppContextProviderProps) => {
   const [appData, setAppData] = useState({
-    user: null,
+    user: window.localStorage.getItem("user") ?? null,
   });
 
   return <AppContext.Provider value={{appData, setAppData}}>{children}</AppContext.Provider>;
