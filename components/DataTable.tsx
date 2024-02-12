@@ -25,7 +25,7 @@ const DataTable = ({endpointList}: Props) => {
               </Tr>
             </Thead>
             <Tbody>
-              {endpointList.slice(0,5).map((endpoint: EndpointInfo, idx:number) => (
+              {endpointList.slice(0,10).map((endpoint: EndpointInfo, idx:number) => (
                 <Tr key={idx}>
                   <Td>{endpoint.name}</Td>
                   <Td>{endpoint.endpoint}</Td>
@@ -44,8 +44,8 @@ const DataTable = ({endpointList}: Props) => {
         </TableContainer>
 
         <Flex mx={6} mt={10} justify="space-between" w="95%">
-            <Text fontSize="xs">100 Words</Text>
-            <Text fontSize="xs">Pagination here</Text>
+            <Text fontSize="xs" textColor={"gray"}>{endpointList?.length} records</Text>
+            <Text fontSize="xs">[Pagination here]</Text>
 
         </Flex>
       </Box>
